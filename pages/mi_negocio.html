@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aquí podrás iniciar sesión/registrarte">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <meta>
+</head>
+<body>
+    <header>
+        <figure class="header_desktop">
+            <a href="../index.html" class="header_desktop">
+                <img id="icono_header" class="header_desktop" src="../assets/images/icono.png" alt="icono de la pagina">
+            </a>
+        </figure>
+        <a href="../index.html" class="header_desktop">
+            <h3 class="header_desktop">Turnanos</h3>
+        </a>
+        <div id="desktop">
+            <figure>
+                <a href="../index.html">
+                    <img id="icono_header" src="../assets/images/icono.png" alt="icono de la pagina">
+                </a>
+            </figure>
+            <a href="../index.html">
+                <h3>Turnanos</h3>
+            </a>
+        </div>
+        <input type="checkbox" id="menu_toggle">
+        <label for="menu_toggle" id="menu_button"><img id="flecha_menu" src="../assets/images/flecha_menu.png" alt="menu"></label>
+        <div class="menu" id="menu_desktop">
+            <div id="grid_menu_desplegable">
+                <div id="encabezado_menu_desplegable">
+                    <figure  class="header_desktop">
+                        <a href="../index.html">
+                            <img id="icono_header" src="../assets/images/icono.png" alt="icono de la pagina">
+                        </a>
+                    </figure>
+                    <a href="../index.html">
+                        <h3  class="header_desktop">Turnanos</h3>
+                    </a>
+                </div>
+                <nav id="barra_de_navegacion">
+                    <ul>
+                        <li><a class="color_base efectos" href="../index.html">¿Cómo Funciona?</a></li>
+                        <li><a class="color_base efectos" href="./sobre_nosotros.html">Sobre Nosotros</a></li>
+                        <li><a class="color_base efectos" href="./FAQs.html">FAQs</a></li>
+                        <li id="list_item_botones">
+                            <a href="./turnos.html">
+                                <input class="boton_navegacion_turnos" type="button" value="Turnos">
+                            </a>
+                            <a href="#">
+                                <input class="boton_navegacion_negocio" type="button" value="Mi Negocio">
+                            </a>
+                        </li>
+                        <li class="desktop_botones">
+                            <a href="./turnos.html">
+                                <input class="boton_navegacion_turnos botones touchMe" type="button" value="Turnos">
+                            </a>
+                        </li>
+                        <li class="desktop_botones">
+                            <a href="#">
+                                <input class="boton_navegacion_negocio botones touchMe" type="button" value="Mi Negocio">
+                            </a>
+                        </li>
+                        <label for="menu_toggle" id="menu_close_button">
+                            <img id="flecha_menu" src="../assets/images/flecha_menu_arriba.png" alt="menu">
+                        </label>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="main_mi_negocio">
+        <input type="checkbox"  id="checkbox_registro">
+        <input type="checkbox"  id="checkbox_mi_negocio">
+        <div id="contenedor_secciones">
+            <section id="seccion_incio_sesion_mi_negocio">
+                <form action="">
+                    <h2>Mi Negocio</h2>
+                    <input class="entrada_datos_inicio_sesion" type="text" placeholder="Usuario" required>
+                    <input class="entrada_datos_inicio_sesion" type="password" placeholder="Contraseña" required>
+                    <div>
+                        <a href="#">Olvidé mi Contraseña</a>
+                        <input type="submit" value="Iniciar Sesión">
+                    </div>
+                </form>
+                <label for="checkbox_mi_negocio">
+                    <figure>
+                        <img src="../assets/images/flecha_volver_atras.png" alt="flecha">
+                    </figure>
+                </label>
+            </section>
+            <section id="seccion_principal_mi_negocio">
+                <label for="checkbox_mi_negocio" id="btn_mi_negocio">Mi Negocio</label>
+                <label for="checkbox_registro" id="btn_registrarse">Registrarse</label>
+            </section>
+            <section id="seccion_registro_mi_negocio">
+                <label for="checkbox_registro">
+                    <figure>
+                        <img src="../assets/images/flecha_volver_atras_al_reves.png" alt="flecha hacia atras">
+                    </figure>
+                </label>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <figure id="icono_footer">
+            <a href="../index.html">
+                <img src="../assets/images/icono_blanco.png" alt="icono TurnanoS">
+            </a>
+        </figure>
+        <div id="texto_footer">
+            <a href="#">© 2023 TurnanoS Todos los derechos reservados</a>
+            <a href="#">Política de Privacidad y Términos de Uso</a>
+            <a href="#">Para consultas y soporte, contactanos</a>
+        </div>
+        <figure id="iconos_redes">
+            <img src="../assets/images/icono_instagram.png" alt="icono de instagram">
+            <img src="../assets/images/icono_facebook.png" alt="icono de facebook">
+        </figure>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Esta página te ayudará a reservar turnos de manera online">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <title>Turnanos</title>
+</head>
+<body>
+    <header>
+        <figure class="header_desktop">
+            <a href="./index.html" class="header_desktop">
+                <img id="icono_header" class="header_desktop" src="./assets/images/icono.png" alt="icono de la pagina">
+            </a>
+        </figure>
+        <a href="./index.html" class="header_desktop">
+            <h3 class="header_desktop">Turnanos</h3>
+        </a>
+        <div id="desktop">
+            <figure>
+                <a href="./index.html">
+                    <img id="icono_header" src="./assets/images/icono.png" alt="icono de la pagina">
+                </a>
+            </figure>
+            <a href="./index.html">
+                <h3>Turnanos</h3>
+            </a>
+        </div>
+        <input type="checkbox" id="menu_toggle">
+        <label for="menu_toggle" id="menu_button"><img id="flecha_menu" src="./assets/images/flecha_menu.png" alt="menu"></label>
+        <div class="menu" id="menu_desktop">
+            <div id="grid_menu_desplegable">
+                <div id="encabezado_menu_desplegable">
+                    <figure  class="header_desktop">
+                        <a href="./index.html">
+                            <img id="icono_header" src="./assets/images/icono.png" alt="icono de la pagina">
+                        </a>
+                    </figure>
+                    <a href="./index.html">
+                        <h3  class="header_desktop">Turnanos</h3>
+                    </a>
+                </div>
+                <nav id="barra_de_navegacion">
+                    <ul>
+                        <li><a class="color_principal sotcefe" href="#">¿Cómo Funciona?</a></li>
+                        <li><a class="color_base efectos" href="./pages/sobre_nosotros.html">Sobre Nosotros</a></li>
+                        <li><a class="color_base efectos" href="./pages/FAQs.html">FAQs</a></li>
+                        <li id="list_item_botones">
+                            <a href="./pages/turnos.html">
+                                <input class="boton_navegacion_turnos" type="button" value="Turnos">
+                            </a>
+                            <a href="./pages/mi_negocio.html">
+                                <input class="boton_navegacion_negocio" type="button" value="Mi Negocio">
+                            </a>
+                        </li>
+                        <li class="desktop_botones">
+                            <a href="./pages/turnos.html">
+                                <input class="boton_navegacion_turnos botones touchMe" type="button" value="Turnos">
+                            </a>
+                        </li>
+                        <li class="desktop_botones">
+                            <a href="./pages/mi_negocio.html">
+                                <input class="boton_navegacion_negocio botones touchMe" type="button" value="Mi Negocio">
+                            </a>
+                        </li>
+                        <label for="menu_toggle" id="menu_close_button">
+                            <img id="flecha_menu" src="./assets/images/flecha_menu_arriba.png" alt="menu">
+                        </label>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="como_funciona">
+        <section id="seccion_foto">
+            <img id="imagen_index" src="./assets/images/placeHolderImage.png" alt="foto_como_funciona?">
+        </section>
+        <section id="sub-seccion_1">
+            <h1>¿Cómo Funciona Nuestra Plataforma de Turnos Digitales?</h1>
+            <p>
+                En Turnanos, hemos desarrollado una innovadora plataforma de turnos digitales
+                diseñada para transformar la manera en que las personas experimentan las esperas en locales e
+                instituciones médicas. Nuestro objetivo es simple: <strong>reducir los tiempos de espera y mejorar la
+                experiencia de los usuarios.</strong>
+            </p>
+        </section>
+        <section id="sub-seccion_2">
+            <h3>Reservas en Línea</h3>
+            <p>
+                Ya no es necesario esperar físicamente en el lugar. Nuestra plataforma permite a los usuarios programar su
+                visita
+                con anticipación. Reserva tu lugar desde la comodidad de tu hogar y llega en el momento que mejor te
+                convenga.
+            </p>
+        </section>
+        <section id="sub-seccion_3">
+            <h3>Notificaciones en Tiempo Real</h3>
+            <p>
+                Mantente informado en todo momento. Recibirás notificaciones en tiempo real que te alertarán cuando sea tu
+                turno. No
+                más incertidumbre ni esperas innecesarias.
+            </p>
+        </section>
+        <section id="sub-seccion_4">
+            <h3>Gestión Eficiente</h3>
+            <p>
+                Para los locales e instituciones médicas, ofrecemos herramientas poderosas para administrar las colas de
+                espera
+                de
+                manera más eficiente. Optimiza tus recursos y brinda un servicio excepcional a tus clientes o pacientes.
+            </p>
+        </section>
+        <section id="sub-seccion_5">
+            <h3>Experiencia Mejorada</h3>
+            <p>
+                Nuestra plataforma no solo reduce los tiempos de espera, sino que también mejora la experiencia general de
+                los
+                usuarios. Menos estrés, menos tiempo perdido y más satisfacción.
+            </p>
+        </section>
+        <section id="sub-seccion_6">
+            <p>
+                Prueba y experimenta un nuevo estándar en la gestión de turnos digitales. Estamos
+                comprometidos con tu comodidad y conveniencia en cada paso del camino.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <figure id="icono_footer">
+            <a href="./index.html">
+                <img src="./assets/images/icono_blanco.png" alt="icono TurnanoS">
+            </a>
+        </figure>
+        <div id="texto_footer">
+            <a href="#">© 2023 TurnanoS Todos los derechos reservados</a>
+            <a href="#">Política de Privacidad y Términos de Uso</a>
+            <a href="#">Para consultas y soporte, contactanos</a>
+        </div>
+        <figure id="iconos_redes">
+            <img src="./assets/images/icono_instagram.png" alt="icono de instagram">
+            <img src="./assets/images/icono_facebook.png" alt="icono de facebook">
+        </figure>
+    </footer>
+</body>
+</html>
