@@ -1,0 +1,233 @@
+main#como_funciona {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: "foto" "txt1" "txt2" "txt3" "txt4" "txt5" "txt6";
+  padding: 5%;
+}
+main#como_funciona h1 {
+  margin-bottom: 5%;
+  text-align: center;
+}
+main#como_funciona h3 {
+  margin-bottom: 5%;
+  text-align: center;
+}
+main#como_funciona #seccion_foto {
+  grid-area: foto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+main#como_funciona #seccion_foto #imagen_index {
+  height: 70%;
+  width: 70%;
+}
+main#como_funciona #sub-seccion_1 {
+  grid-area: txt1;
+  margin-bottom: 15%;
+  text-align: justify;
+}
+main#como_funciona #sub-seccion_2 {
+  grid-area: txt2;
+  margin-bottom: 15%;
+  text-align: justify;
+}
+main#como_funciona #sub-seccion_3 {
+  grid-area: txt3;
+  margin-bottom: 15%;
+  text-align: justify;
+}
+main#como_funciona #sub-seccion_4 {
+  grid-area: txt4;
+  margin-bottom: 15%;
+  text-align: justify;
+}
+main#como_funciona #sub-seccion_5 {
+  grid-area: txt5;
+  margin-bottom: 15%;
+  text-align: justify;
+}
+main#como_funciona #sub-seccion_6 {
+  grid-area: txt6;
+  margin-bottom: 15%;
+  text-align: justify;
+}
+
+header .desktop_botones {
+  display: none;
+}
+header #menu_toggle {
+  display: none;
+}
+header #menu_toggle:checked + #menu_button + .menu {
+  top: 0;
+}
+header .menu {
+  background-color: #a3bac3;
+  display: block;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: -100%;
+  left: 0;
+  transition: top 0.4s;
+  z-index: 1;
+}
+header .menu #grid_menu_desplegable {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20vh 60vh 20vh;
+  grid-template-areas: "header_menu" "opciones_menu";
+}
+header .menu #grid_menu_desplegable #encabezado_menu_desplegable {
+  display: flex;
+  grid-area: header_menu;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .menu #grid_menu_desplegable #encabezado_menu_desplegable a {
+  padding-right: 8px;
+}
+header .menu #grid_menu_desplegable #barra_de_navegacion {
+  grid-area: opciones_menu;
+}
+header .menu #grid_menu_desplegable #barra_de_navegacion ul {
+  list-style-type: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header .menu #grid_menu_desplegable #barra_de_navegacion ul #list_item_botones {
+  display: flex;
+  height: 23%;
+  width: 70%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header .menu #grid_menu_desplegable #barra_de_navegacion ul .boton_navegacion_turnos {
+  height: 100%;
+  padding: 6px 22px 6px 22px;
+  border: 2px solid #006989;
+  background-color: white;
+  color: #006989;
+  border-radius: 14px;
+  font-size: 0.8em;
+}
+header .menu #grid_menu_desplegable #barra_de_navegacion ul .boton_navegacion_negocio {
+  height: 100%;
+  padding: 6px 10px 6px 10px;
+  border: 2px solid #006989;
+  background-color: #006989;
+  color: white;
+  border-radius: 14px;
+  font-size: 0.8em;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.color_principal {
+  color: #006989;
+}
+
+.color_base {
+  color: white;
+}
+
+body {
+  display: grid;
+  font-family: "Josefin Sans", sans-serif;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: 20vh 80vh 35vh;
+  grid-template-areas: "header" "main" "footer";
+}
+body header {
+  background-color: #a3bac3;
+  display: flex;
+  grid-area: header;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.3em;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+body header a {
+  text-decoration: none;
+  color: #006989;
+}
+body header #icono_header {
+  height: 45px;
+}
+body header #flecha_menu {
+  height: 17px;
+}
+body header #desktop {
+  display: none;
+}
+body footer {
+  background-color: #808d92;
+  display: grid;
+  grid-area: footer;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: 35% 30% 35%;
+  grid-template-areas: "icono_footer" "texto_footer" "iconos_redes";
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+body footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+  text-align: center;
+}
+body footer #icono_footer {
+  grid-area: icono_footer;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body footer #icono_footer a img {
+  height: 90px;
+}
+body footer #texto_footer {
+  grid-area: texto_footer;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body footer #iconos_redes {
+  display: flex;
+  grid-area: iconos_redes;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+body footer #iconos_redes img {
+  height: 30%;
+}
+
+/*# sourceMappingURL=main.css.map */

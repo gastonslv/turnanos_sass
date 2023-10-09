@@ -1,0 +1,76 @@
+main#como_funciona {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+    "foto"
+    "txt1"
+    "txt2"
+    "txt3"
+    "txt4"
+    "txt5"
+    "txt6";
+    padding: 5%;
+
+    h1 {
+        margin-bottom: 5%;
+        text-align: center;
+    }
+
+    h3 {
+        margin-bottom: 5%;
+        text-align: center;
+    }
+
+    #seccion_foto {
+        grid-area: foto;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        #imagen_index {
+            height: 70%;
+            width: 70%;
+        }
+    }
+
+    #sub-seccion_1 {
+        grid-area: txt1;
+        margin-bottom: 15%;
+        text-align: justify;
+    }
+
+    #sub-seccion_2 {
+        grid-area: txt2;
+        margin-bottom: 15%;
+        text-align: justify;
+    }
+    
+    #sub-seccion_3 {
+        grid-area: txt3;
+        margin-bottom: 15%;
+        text-align: justify;
+    }
+    
+    #sub-seccion_4 {
+        grid-area: txt4;
+        margin-bottom: 15%;
+        text-align: justify;
+    }
+    
+    #sub-seccion_5 {
+        grid-area: txt5;
+        margin-bottom: 15%;
+        text-align: justify;
+    }
+    
+    #sub-seccion_6 {
+        grid-area: txt6;
+        margin-bottom: 15%;
+        text-align: justify;
+    }
+}
