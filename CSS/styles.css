@@ -192,7 +192,7 @@ footer a {
         grid-template-areas: "icono_titulo nav_header";
     }
 
-    .header_desktop{
+    .header_desktop {
         display: none;
     }
 
