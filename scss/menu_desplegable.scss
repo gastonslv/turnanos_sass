@@ -88,3 +88,74 @@ header {
         }
     }
 }
+
+@media (min-width: 1400px){
+    header {
+        #menu_toggle {
+            display: none;
+        }
+
+        #flecha_menu {
+            display: none;
+        }
+
+        #menu_desktop {
+            grid-area: nav_header;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            top: 0;
+
+            #grid_menu_desplegable {
+                display: block;
+                height: 100%;
+                width: 100%;
+
+                #barra_de_navegacion {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+
+                    ul {
+                        list-style-type: none;
+                        display: flex;
+                        height: 100%;
+                        width: 70%;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-around;
+
+                        #list_item_botones {
+                            display: none;
+                        }
+                    
+                        .desktop_botones {
+                            display: inline-block;
+
+                            .botones {
+                                &:hover {
+                                    transition: background-color 0.1s ease;
+                                    background-color: #00698975;
+                                    color: white;
+                                    border-color:#00698927;
+                                    cursor: pointer;
+                                }
+                            }
+                        
+                            .touchMe {
+                                &:active {
+                                    transition: transform 0.2s ease;
+                                    transform: scale(0.95);
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
