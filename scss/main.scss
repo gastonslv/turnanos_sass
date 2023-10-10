@@ -1,6 +1,8 @@
+@import "./mixins/mixins.scss";
 @import "./variables/colores.scss";
-@import "./pages/index.scss";
 @import "./menu_desplegable.scss";
+@import "./pages/index.scss";
+@import "./pages/FAQS.scss";
 
 * {
     margin: 0px;
@@ -13,7 +15,7 @@
 }
 
 .color_base {
-    color: white;
+    color: $color-texto-blanco;
 }
 
 body {
@@ -56,63 +58,177 @@ body {
             display: none;
         }
     }
+}
 
+footer {
+    background-color: #808d92;
+    display: grid;
+    grid-area: footer;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 30% 35%;
+    grid-template-areas:
+    "icono_footer"
+    "texto_footer"
+    "iconos_redes";
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+#icono_footer {
+    grid-area: icono_footer;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#icono_footer a img {
+    height: 90px;
+}
+
+#texto_footer {
+    grid-area: texto_footer;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#iconos_redes {
+    display: flex;
+    grid-area: iconos_redes;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#iconos_redes img {
+    height: 30%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+@media (min-width: 768px){ /* adaptacion del footer en tablet */
     footer {
-        background-color: #808d92;
-        display: grid;
-        grid-area: footer;
-        height: 100%;
-        width: 100%;
-        grid-template-columns: 100%;
-        grid-template-rows: 35% 30% 35%;
-        grid-template-areas:
-        "icono_footer"
-        "texto_footer"
-        "iconos_redes";
-        border-top-left-radius: 18px;
-        border-top-right-radius: 18px;
+        height: 60%;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 100%;
+        grid-template-areas: "icono_footer texto_footer iconos_redes";
+        align-items: center;
+        justify-items: center;
+    }
+    
+    #icono_footer {
+        grid-area: icono_footer;
+    }
+    
+    #icono_footer a img {
+        height: 90px;
+    }
+    
+    #iconos_redes {
+        display: flex;
+        width: 50%;
+        grid-area: iconos_redes;
+        flex-direction: reverse;
+        justify-content: space-between;
+    }
+    
+    #iconos_redes img {
+        height: 45px;
+    }
+    
+    footer a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9em;
+        text-align: center;
+    }
+}
 
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.8em;
-            text-align: center;
-        }
+@media (min-width: 1400px){
+    footer {
+        height: 45%;
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+    
+    #icono_footer a img {
+        height: 85px;
+    }
+    
+    #texto_footer{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 
-        #icono_footer {
-            grid-area: icono_footer;
-            display: flex;
+    #iconos_redes {
+        justify-content: space-evenly;
+    }
+    
+    #iconos_redes img {
+        height: 33px;
+    }
+}
+
+@media (min-width: 1400px){
+    body {
+        header {
+            background-color: #a3bac3;
             height: 100%;
             width: 100%;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+            grid-area: header;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 100%;
+            grid-template-areas: "icono_titulo nav_header";
 
-            a img {
-                height: 90px; 
+            .header_desktop {
+                display: none;
             }
-        }
 
-        #texto_footer {
-            grid-area: texto_footer;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-        }
+            #desktop {
+                height: 100%;
+                width: 100%;
+                grid-area: icono_titulo;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-        #iconos_redes {
-            display: flex;
-            grid-area: iconos_redes;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            
-            img {
-                height: 30%;
+                a {
+                    margin-left: 7%;
+                    text-decoration: none;
+                    color: #006989;
+                }
+
+                #icono_header {
+                    height: 55px;
+                }
+            }
+        
+            .efectos {
+                &:hover {
+                    color: #00698977;
+                    transition: color 0.3s ease;
+                }
+            }
+        
+            .sotcefe {
+                &:hover {
+                    color: white;
+                    transition: color 0.3s ease;
+                }
             }
         }
     }
