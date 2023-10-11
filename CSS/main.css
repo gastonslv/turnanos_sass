@@ -187,6 +187,36 @@ main#como_funciona #sub-seccion_6 {
   text-align: justify;
 }
 
+#main_sobre_nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#main_sobre_nosotros iframe {
+  display: flex;
+  grid-area: texto;
+  height: 50%;
+  width: 90%;
+  border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+  #main_sobre_nosotros iframe {
+    display: flex;
+    grid-area: texto;
+    height: 60%;
+    width: 80%;
+  }
+}
+@media (min-width: 1400px) {
+  #main_sobre_nosotros iframe {
+    display: flex;
+    grid-area: texto;
+    height: 80%;
+    width: 80%;
+  }
+}
 /* PAGINA FAQs */
 #body_FAQs {
   grid-template-columns: 100%;
@@ -377,6 +407,819 @@ main#como_funciona #sub-seccion_6 {
   #body_FAQs #main_FAQs #cuerpo_consultas form #boton_enviar_consulta:active {
     transition: transform 0.1s ease;
     transform: scale(1.05);
+  }
+}
+#main_turnos {
+  position: relative;
+  grid-area: main;
+  height: 80vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#main_turnos #siguiente_s1 {
+  display: none;
+}
+#main_turnos #siguiente_s1:checked + #form_turnos {
+  transform: translateY(-25%);
+}
+#main_turnos #siguiente_s2 {
+  display: none;
+}
+#main_turnos #siguiente_s2:checked + #siguiente_s1 + #form_turnos {
+  transform: translateY(-50%);
+}
+#main_turnos #siguiente_s3 {
+  display: none;
+}
+#main_turnos #siguiente_s3:checked + #siguiente_s2 + #siguiente_s1 + #form_turnos {
+  transform: translateY(-75%);
+}
+#main_turnos #form_turnos {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 400%;
+  transition: transform 0.4s;
+  /* ------- SERVICIO/COMERCIO ------- */
+  /* ------- ELEGIR FECHA ------- */
+  /* ------- DATOS PERSONALES ------- */
+  /* ------- POLITICAS CANCELACION ------- */
+}
+#main_turnos #form_turnos fieldset {
+  border-style: none;
+}
+#main_turnos #form_turnos #fieldset_servicio_comercio {
+  display: grid;
+  width: 100%;
+  height: 80%;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-areas: "seccion_titulo_SyC" "seccion_contenido_SyC" "seccion_botones_SyC";
+}
+#main_turnos #form_turnos #fieldset_servicio_comercio #seccion_titulo_SyC {
+  grid-area: seccion_titulo_SyC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main_turnos #form_turnos #fieldset_servicio_comercio #seccion_contenido_SyC {
+  grid-area: seccion_contenido_SyC;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2%;
+}
+#main_turnos #form_turnos #fieldset_servicio_comercio #seccion_contenido_SyC select {
+  height: 10%;
+  border: 2px solid lightgrey;
+  border-radius: 12px;
+}
+#main_turnos #form_turnos #fieldset_servicio_comercio #seccion_contenido_SyC .desktop_mapa {
+  display: none;
+}
+#main_turnos #form_turnos #fieldset_servicio_comercio #seccion_botones_SyC {
+  grid-area: seccion_botones_SyC;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#main_turnos #form_turnos #fieldset_servicio_comercio #seccion_botones_SyC #btn_siguiente_s1 {
+  background-color: rgba(0, 105, 137, 0.4784313725);
+  border: none;
+  color: white;
+  padding: 2%;
+  border-radius: 10px;
+}
+#main_turnos #form_turnos #fieldset_fecha {
+  display: grid;
+  width: 100%;
+  height: 80%;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-areas: "seccion_titulo_fecha" "seccion_contenido_fecha" "seccion_botones_fecha";
+}
+#main_turnos #form_turnos #fieldset_fecha #seccion_titulo_fecha {
+  grid-area: seccion_titulo_fecha;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main_turnos #form_turnos #fieldset_fecha #seccion_contenido_fecha {
+  grid-area: seccion_contenido_fecha;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+#main_turnos #form_turnos #fieldset_fecha #seccion_contenido_fecha input {
+  height: 10%;
+  width: 100%;
+  border: 2px solid lightgrey;
+  border-radius: 12px;
+}
+#main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha {
+  grid-area: seccion_botones_fecha;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+#main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_siguiente_s2 {
+  background-color: rgba(0, 105, 137, 0.4784313725);
+  border: none;
+  color: white;
+  padding: 2%;
+  border-radius: 10px;
+}
+#main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_volver_s2 {
+  color: grey;
+  text-decoration-line: underline;
+}
+#main_turnos #form_turnos #fieldset_datos_personales {
+  display: grid;
+  width: 100%;
+  height: 80%;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-areas: "seccion_titulo_datos_personales" "seccion_contenido_datos_personales" "seccion_botones_datos_personales";
+}
+#main_turnos #form_turnos #fieldset_datos_personales #seccion_titulo_datos_personales {
+  grid-area: seccion_titulo_datos_personales;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main_turnos #form_turnos #fieldset_datos_personales #seccion_contenido_datos_personales {
+  grid-area: seccion_contenido_datos_personales;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2%;
+}
+#main_turnos #form_turnos #fieldset_datos_personales #seccion_contenido_datos_personales input {
+  text-align: center;
+  height: 10%;
+  width: 100%;
+  border: 2px solid lightgrey;
+  border-radius: 12px;
+}
+#main_turnos #form_turnos #fieldset_datos_personales #seccion_contenido_datos_personales #observaciones_turnos {
+  height: 30%;
+}
+#main_turnos #form_turnos #fieldset_datos_personales #seccion_botones_datos_personales {
+  grid-area: seccion_botones_datos_personales;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+#main_turnos #form_turnos #fieldset_datos_personales #seccion_botones_datos_personales #btn_siguiente_s3 {
+  background-color: rgba(0, 105, 137, 0.4784313725);
+  border: none;
+  color: white;
+  padding: 2%;
+  border-radius: 10px;
+}
+#main_turnos #form_turnos #fieldset_datos_personales #seccion_botones_datos_personales #btn_volver_s3 {
+  color: grey;
+  text-decoration-line: underline;
+}
+#main_turnos #form_turnos #fieldset_politica_cancelacion {
+  display: grid;
+  width: 100%;
+  height: 80%;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-areas: "seccion_titulo_polCanc" "seccion_contenido_polCanc" "seccion_botones_polCanc";
+}
+#main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_titulo_politica_cancelacion {
+  grid-area: seccion_titulo_polCanc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_contenido_politica_cancelacion {
+  grid-area: seccion_contenido_polCanc;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_contenido_politica_cancelacion p {
+  text-align: start;
+  height: 300px;
+  width: 350px;
+  overflow: scroll;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1%;
+}
+#main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_contenido_politica_cancelacion #bloque_acepto_terminos_condiciones {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_botones_politica_cancelacion {
+  grid-area: seccion_botones_polCanc;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+#main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_botones_politica_cancelacion #btn_reservar_turno {
+  background-color: #006989;
+  border: 1px solid #006989;
+  color: white;
+  font-size: 1em;
+  padding: 2.2%;
+  border-radius: 10px;
+}
+#main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_botones_politica_cancelacion #btn_volver_s4 {
+  color: grey;
+  text-decoration-line: underline;
+}
+
+@media (min-width: 768px) {
+  #main_turnos {
+    display: flex;
+    justify-content: center;
+  }
+  #main_turnos #form_turnos {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+    width: 70%;
+    height: 400%;
+    transition: transform 0.4s;
+  }
+}
+@media (min-width: 1400px) {
+  #main_turnos #form_turnos {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+    width: 95%;
+    height: 400%;
+    transition: transform 0.4s;
+    /* ------- SERVICIO/COMERCIO ------- */
+    /* ------- ELEGIR FECHA ------- */
+    /* ------- DATOS PERSONALES ------- */
+    /* ------- POLITICAS CANCELACION ------- */
+  }
+  #main_turnos #form_turnos #fieldset_servicio_comercio {
+    display: grid;
+    width: 100%;
+    height: 25%;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "nada  nada" "sec_titulo mapa" "seleccion mapa" "seleccion mapa" "sec_btns sec_btns";
+  }
+  #main_turnos #form_turnos #fieldset_servicio_comercio #seccion_titulo_SyC {
+    grid-area: sec_titulo;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  #main_turnos #form_turnos #fieldset_servicio_comercio #seccion_contenido_SyC {
+    grid-area: seleccion;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10%;
+    padding: 0;
+  }
+  #main_turnos #form_turnos #fieldset_servicio_comercio #seccion_contenido_SyC select {
+    width: 100%;
+    height: 15%;
+    border: 2px solid lightgrey;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  #main_turnos #form_turnos #fieldset_servicio_comercio #seccion_contenido_SyC .mobile_mapa {
+    display: none;
+  }
+  #main_turnos #form_turnos #fieldset_servicio_comercio #mapa_padre {
+    grid-area: mapa;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #main_turnos #form_turnos #fieldset_servicio_comercio #mapa_padre .desktop_mapa {
+    display: inline-block;
+    height: 90%;
+    width: 90%;
+  }
+  #main_turnos #form_turnos #fieldset_servicio_comercio #seccion_botones_SyC {
+    grid-area: sec_btns;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #main_turnos #form_turnos #fieldset_servicio_comercio #seccion_botones_SyC #btn_siguiente_s1 {
+    background-color: rgba(0, 105, 137, 0.4784313725);
+    border: 1px solid rgba(0, 105, 137, 0.2392156863);
+    color: white;
+    padding: 1%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  #main_turnos #form_turnos #fieldset_servicio_comercio #seccion_botones_SyC #btn_siguiente_s1:hover {
+    transition: background-color 0.2s ease;
+    background-color: white;
+    color: #006989;
+  }
+  #main_turnos #form_turnos #fieldset_servicio_comercio #seccion_botones_SyC #btn_siguiente_s1:active {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+  #main_turnos #form_turnos #fieldset_fecha {
+    display: grid;
+    width: 100%;
+    height: 25%;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "nada nada" "seccion_titulo_fecha futuro_selector_fechas" "seccion_contenido_fecha futuro_selector_fechas" "seccion_contenido_fecha futuro_selector_fechas" "seccion_botones_fecha seccion_botones_fecha";
+  }
+  #main_turnos #form_turnos #fieldset_fecha #seccion_titulo_fecha {
+    grid-area: seccion_titulo_fecha;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  #main_turnos #form_turnos #fieldset_fecha #seccion_contenido_fecha {
+    grid-area: seccion_contenido_fecha;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 0%;
+    margin-top: 10%;
+  }
+  #main_turnos #form_turnos #fieldset_fecha #seccion_contenido_fecha input {
+    height: 20%;
+    width: 100%;
+    border: 2px solid lightgrey;
+    border-radius: 12px;
+  }
+  #main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha {
+    grid-area: seccion_botones_fecha;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_siguiente_s2 {
+    background-color: rgba(0, 105, 137, 0.4784313725);
+    border: 1px solid rgba(0, 105, 137, 0.2392156863);
+    color: white;
+    padding: 1%;
+    border-radius: 10px;
+    margin-left: 1%;
+    cursor: pointer;
+  }
+  #main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_siguiente_s2:hover {
+    transition: background-color 0.2s ease;
+    background-color: white;
+    color: #006989;
+  }
+  #main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_siguiente_s2:hover {
+    transition: background-color 0.2s ease;
+    background-color: white;
+    color: #006989;
+  }
+  #main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_volver_s2 {
+    color: grey;
+    text-decoration-line: underline;
+    margin-right: 1%;
+    cursor: pointer;
+  }
+  #main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_volver_s2:hover {
+    transition: background-color 0.2s ease;
+    background-color: white;
+    color: #006989;
+  }
+  #main_turnos #form_turnos #fieldset_datos_personales {
+    display: grid;
+    width: 100%;
+    height: 25%;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: "seccion_titulo_datos_personales" "seccion_contenido_datos_personales" "seccion_botones_datos_personales";
+  }
+  #main_turnos #form_turnos #fieldset_datos_personales #seccion_titulo_datos_personales {
+    grid-area: seccion_titulo_datos_personales;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #main_turnos #form_turnos #fieldset_datos_personales #seccion_contenido_datos_personales {
+    grid-area: seccion_contenido_datos_personales;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0%;
+  }
+  #main_turnos #form_turnos #fieldset_datos_personales #seccion_contenido_datos_personales input {
+    text-align: center;
+    height: 10%;
+    width: 70%;
+    border: 2px solid lightgrey;
+    border-radius: 12px;
+    outline-color: rgba(0, 105, 137, 0.4666666667);
+  }
+  #main_turnos #form_turnos #fieldset_datos_personales #seccion_contenido_datos_personales #observaciones_turnos {
+    height: 30%;
+  }
+  #main_turnos #form_turnos #fieldset_datos_personales #seccion_botones_datos_personales {
+    grid-area: seccion_botones_datos_personales;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #main_turnos #form_turnos #fieldset_datos_personales #seccion_botones_datos_personales #btn_siguiente_s3 {
+    background-color: rgba(0, 105, 137, 0.4784313725);
+    border: 1px solid rgba(0, 105, 137, 0.2392156863);
+    color: white;
+    padding: 1%;
+    margin-left: 1%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  #main_turnos #form_turnos #fieldset_datos_personales #seccion_botones_datos_personales #btn_siguiente_s3:hover {
+    transition: background-color 0.2s ease;
+    background-color: white;
+    color: #006989;
+  }
+  #main_turnos #form_turnos #fieldset_datos_personales #seccion_botones_datos_personales #btn_siguiente_s3:active {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+  #main_turnos #form_turnos #fieldset_datos_personales #seccion_botones_datos_personales #btn_volver_s3 {
+    color: grey;
+    text-decoration-line: underline;
+    margin-right: 1%;
+    cursor: pointer;
+  }
+  #main_turnos #form_turnos #fieldset_datos_personales #seccion_botones_datos_personales #btn_volver_s3:active {
+    transform: scale(0.9);
+    transition: transform 0.2s ease;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion {
+    display: grid;
+    width: 100%;
+    height: 25%;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: "seccion_titulo_polCanc" "seccion_contenido_polCanc" "seccion_botones_polCanc";
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_titulo_politica_cancelacion {
+    grid-area: seccion_titulo_polCanc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_contenido_politica_cancelacion {
+    grid-area: seccion_contenido_polCanc;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_contenido_politica_cancelacion p {
+    text-align: start;
+    height: 350px;
+    width: 60%;
+    overflow: scroll;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1%;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_contenido_politica_cancelacion #bloque_acepto_terminos_condiciones {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_contenido_politica_cancelacion #bloque_acepto_terminos_condiciones label {
+    padding-left: 1%;
+    cursor: pointer;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_contenido_politica_cancelacion #bloque_acepto_terminos_condiciones label:hover {
+    color: rgba(0, 105, 137, 0.4745098039);
+    transition: color 0.2s ease;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_contenido_politica_cancelacion #bloque_acepto_terminos_condiciones input {
+    cursor: pointer;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_botones_politica_cancelacion {
+    grid-area: seccion_botones_polCanc;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_botones_politica_cancelacion #btn_volver_s4 {
+    color: grey;
+    text-decoration-line: underline;
+    margin-right: 1%;
+    cursor: pointer;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_botones_politica_cancelacion #btn_volver_s4:active {
+    transform: scale(0.9);
+    transition: transform 0.2s ease;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_botones_politica_cancelacion #btn_reservar_turno {
+    background-color: #006989;
+    border: 1px solid #006989;
+    color: white;
+    padding: 1%;
+    border-radius: 10px;
+    margin-left: 1%;
+    cursor: pointer;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_botones_politica_cancelacion #btn_reservar_turno:hover {
+    background-color: white;
+    transition: background-color 0.2s ease;
+    color: #006989;
+  }
+  #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_botones_politica_cancelacion #btn_reservar_turno:active {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+}
+#main_mi_negocio {
+  grid-area: main;
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+}
+#main_mi_negocio #checkbox_mi_negocio {
+  display: none;
+}
+#main_mi_negocio #checkbox_mi_negocio:checked + #contenedor_secciones {
+  transform: translateX(0%);
+}
+#main_mi_negocio #checkbox_registro {
+  display: none;
+}
+#main_mi_negocio #checkbox_registro:checked + #checkbox_mi_negocio + #contenedor_secciones {
+  transform: translate(-66.6666%);
+}
+#main_mi_negocio #contenedor_secciones {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100%;
+  width: 300%;
+  transition: transform 0.4s;
+  transform: translateX(-33.3333%);
+}
+#main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 10fr 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "nada inicio_sesion nada_2";
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form {
+  background-color: rgba(0, 105, 137, 0.4588235294);
+  grid-area: inicio_sesion;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10%;
+  height: 60%;
+  width: 100%;
+}
+#main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form h2 {
+  color: white;
+  position: relative;
+  font-size: 1.7em;
+}
+#main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form .entrada_datos_inicio_sesion {
+  text-align: center;
+  width: 100%;
+  height: 12%;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+#main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+#main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form div a {
+  color: white;
+  width: 50%;
+  font-size: 0.7em;
+}
+#main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form div input {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 7px;
+}
+#main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio label {
+  grid-area: inicio_sesion;
+  display: flex;
+  position: relative;
+  top: 40%;
+  justify-content: center;
+}
+#main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio label figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+#main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio label figure img {
+  height: 60px;
+}
+#main_mi_negocio #contenedor_secciones #seccion_principal_mi_negocio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+#main_mi_negocio #contenedor_secciones #seccion_principal_mi_negocio #btn_mi_negocio {
+  border: 2px solid #006989;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1.5em;
+}
+#main_mi_negocio #contenedor_secciones #seccion_principal_mi_negocio #btn_registrarse {
+  border: 2px solid #006989;
+  border-radius: 12px;
+  padding: 12px;
+  background-color: #006989;
+  color: white;
+  font-size: 1.5em;
+}
+#main_mi_negocio #contenedor_secciones #seccion_registro_mi_negocio {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1400px) {
+  #main_mi_negocio {
+    grid-area: main;
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 4%;
+  }
+  #main_mi_negocio #checkbox_registro:checked + #checkbox_mi_negocio + #contenedor_secciones {
+    transform: translate(0%);
+  }
+  #main_mi_negocio #contenedor_secciones {
+    background-color: rgba(0, 105, 137, 0.4588235294);
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "iniciar_sesionn registrarsee";
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform: translateX(0%);
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio {
+    position: relative;
+    grid-area: iniciar_sesionn;
+    display: grid;
+    grid-template-columns: 2fr 10fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "nada inicio_sesion nada_2";
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form {
+    background-color: transparent;
+    grid-area: inicio_sesion;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 12px;
+    padding: 10%;
+    height: 60%;
+    width: 100%;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form h2 {
+    color: white;
+    position: relative;
+    font-size: 1.7em;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form .entrada_datos_inicio_sesion {
+    text-align: center;
+    width: 100%;
+    height: 12%;
+    border: 1px solid white;
+    border-radius: 10px;
+    outline-color: rgba(0, 105, 137, 0.4745098039);
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form div a {
+    color: white;
+    width: 50%;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form div a:active {
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+    color: whitesmoke;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form div input {
+    border: 1px solid rgba(255, 255, 255, 0.356);
+    border-radius: 10px;
+    padding: 7px;
+    cursor: pointer;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form div input:hover {
+    background-color: rgba(0, 105, 137, 0.4196078431);
+    color: white;
+    transition: background-color 0.2s ease;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form div input:active {
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio label {
+    display: none;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio label figure {
+    display: none;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_principal_mi_negocio {
+    grid-area: registrarsee;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_principal_mi_negocio #btn_mi_negocio {
+    display: none;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_principal_mi_negocio #btn_registrarse {
+    border: 2px solid #006989;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #006989;
+    color: white;
+    font-size: 1.5em;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_principal_mi_negocio #btn_registrarse:hover {
+    background-color: white;
+    transition: background-color 0.2s ease;
+    color: #006989;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_principal_mi_negocio #btn_registrarse:active {
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+  }
+  #main_mi_negocio #contenedor_secciones #seccion_registro_mi_negocio {
+    display: none;
   }
 }
 * {
