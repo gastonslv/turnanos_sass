@@ -12,7 +12,7 @@ header {
     }
 
     .menu {
-        background-color: #a3bac3;
+        background-color: $color-secundario;
         display: block;
         position: fixed;
         height: 100%;
@@ -63,23 +63,11 @@ header {
                     }
 
                     .boton_navegacion_turnos {
-                        height: 100%;
-                        padding: 6px 22px 6px 22px;
-                        border: 2px solid #006989;
-                        background-color: white;
-                        color: #006989;
-                        border-radius: 14px;
-                        font-size: 0.8em;
+                        @include btn_navegacion('turnos')
                     }
                     
                     .boton_navegacion_negocio {
-                        height: 100%;
-                        padding: 6px 10px 6px 10px;
-                        border: 2px solid #006989;
-                        background-color: #006989;
-                        color: white;
-                        border-radius: 14px;
-                        font-size: 0.8em;
+                        @include btn_navegacion('negocio')
                     }
                 }
             }
@@ -138,7 +126,7 @@ header {
                             .botones {
                                 &:hover {
                                     transition: background-color 0.2s ease;
-                                    background-color: #00698975;
+                                    background-color: $color-principal;
                                     color: white;
                                     border-color:#00698927;
                                     cursor: pointer;

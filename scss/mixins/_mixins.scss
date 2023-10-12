@@ -9,3 +9,20 @@
     }
 }
 
+@mixin btn_navegacion($tipo: '') {
+    height: 100%;
+    border: 2px solid $color-principal;
+    border-radius: 14px;
+    font-size: 0.8em;
+
+    @if $tipo == 'turnos' {
+        background-color: white;
+        padding: 6px 22px 6px 22px;
+        color: $color-principal;
+    }
+    @if $tipo == 'negocio' {
+        background-color: $color-principal;
+        padding: 6px 10px 6px 10px;
+        color: $color-texto-blanco;
+    }
+}
