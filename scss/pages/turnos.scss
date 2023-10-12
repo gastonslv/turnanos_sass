@@ -78,11 +78,16 @@
                     border-radius: 12px;
                 }
 
+            }
+            
+            #mapa_padre {
+                display: none;
+
                 .desktop_mapa {
                     display: none;
                 }
             }
-
+            
             #seccion_botones_SyC {
                 grid-area: seccion_botones_SyC;
                 display: flex;
