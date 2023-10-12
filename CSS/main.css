@@ -55,21 +55,21 @@ header .menu #grid_menu_desplegable #barra_de_navegacion ul #list_item_botones {
 }
 header .menu #grid_menu_desplegable #barra_de_navegacion ul .boton_navegacion_turnos {
   height: 100%;
-  padding: 6px 22px 6px 22px;
   border: 2px solid #006989;
-  background-color: white;
-  color: #006989;
   border-radius: 14px;
   font-size: 0.8em;
+  background-color: white;
+  padding: 6px 22px 6px 22px;
+  color: #006989;
 }
 header .menu #grid_menu_desplegable #barra_de_navegacion ul .boton_navegacion_negocio {
   height: 100%;
-  padding: 6px 10px 6px 10px;
   border: 2px solid #006989;
-  background-color: #006989;
-  color: white;
   border-radius: 14px;
   font-size: 0.8em;
+  background-color: #006989;
+  padding: 6px 10px 6px 10px;
+  color: white;
 }
 
 @media (min-width: 1400px) {
@@ -116,7 +116,7 @@ header .menu #grid_menu_desplegable #barra_de_navegacion ul .boton_navegacion_ne
   }
   header #menu_desktop #grid_menu_desplegable #barra_de_navegacion ul .desktop_botones .botones:hover {
     transition: background-color 0.2s ease;
-    background-color: rgba(0, 105, 137, 0.4588235294);
+    background-color: #006989;
     color: white;
     border-color: rgba(0, 105, 137, 0.1529411765);
     cursor: pointer;
@@ -129,8 +129,8 @@ header .menu #grid_menu_desplegable #barra_de_navegacion ul .boton_navegacion_ne
 }
 main#como_funciona {
   display: grid;
-  width: 100%;
   height: 100%;
+  width: 100%;
   overflow: scroll;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(7, 1fr);
@@ -252,8 +252,8 @@ main#como_funciona #sub-seccion_6 {
 #body_FAQs #main_FAQs #cuerpo_preguntas_frecuntes #preguntas_FAQs { /* padre flex */
   grid-area: pregutas_faqs;
   display: block;
-  width: 100%;
   height: 100%;
+  width: 100%;
   border-radius: 20px;
   overflow: scroll;
 }
@@ -440,8 +440,8 @@ main#como_funciona #sub-seccion_6 {
   flex-direction: column;
   position: relative;
   z-index: 0;
-  width: 100%;
   height: 400%;
+  width: 100%;
   transition: transform 0.4s;
   /* ------- SERVICIO/COMERCIO ------- */
   /* ------- ELEGIR FECHA ------- */
@@ -453,8 +453,8 @@ main#como_funciona #sub-seccion_6 {
 }
 #main_turnos #form_turnos #fieldset_servicio_comercio {
   display: grid;
-  width: 100%;
   height: 80%;
+  width: 100%;
   grid-template-columns: 100%;
   grid-template-rows: 1fr 5fr 1fr;
   grid-template-areas: "seccion_titulo_SyC" "seccion_contenido_SyC" "seccion_botones_SyC";
@@ -479,7 +479,10 @@ main#como_funciona #sub-seccion_6 {
   border: 2px solid lightgrey;
   border-radius: 12px;
 }
-#main_turnos #form_turnos #fieldset_servicio_comercio #seccion_contenido_SyC .desktop_mapa {
+#main_turnos #form_turnos #fieldset_servicio_comercio #mapa_padre {
+  display: none;
+}
+#main_turnos #form_turnos #fieldset_servicio_comercio #mapa_padre .desktop_mapa {
   display: none;
 }
 #main_turnos #form_turnos #fieldset_servicio_comercio #seccion_botones_SyC {
@@ -499,8 +502,8 @@ main#como_funciona #sub-seccion_6 {
 }
 #main_turnos #form_turnos #fieldset_fecha {
   display: grid;
-  width: 100%;
   height: 80%;
+  width: 100%;
   grid-template-columns: 100%;
   grid-template-rows: 1fr 5fr 1fr;
   grid-template-areas: "seccion_titulo_fecha" "seccion_contenido_fecha" "seccion_botones_fecha";
@@ -593,8 +596,8 @@ main#como_funciona #sub-seccion_6 {
 }
 #main_turnos #form_turnos #fieldset_politica_cancelacion {
   display: grid;
-  width: 100%;
   height: 80%;
+  width: 100%;
   grid-template-columns: 100%;
   grid-template-rows: 1fr 5fr 1fr;
   grid-template-areas: "seccion_titulo_polCanc" "seccion_contenido_polCanc" "seccion_botones_polCanc";
@@ -659,8 +662,8 @@ main#como_funciona #sub-seccion_6 {
     flex-direction: column;
     position: relative;
     z-index: 0;
-    width: 70%;
     height: 400%;
+    width: 70%;
     transition: transform 0.4s;
   }
 }
@@ -670,8 +673,8 @@ main#como_funciona #sub-seccion_6 {
     flex-direction: column;
     position: relative;
     z-index: 0;
-    width: 95%;
     height: 400%;
+    width: 95%;
     transition: transform 0.4s;
     /* ------- SERVICIO/COMERCIO ------- */
     /* ------- ELEGIR FECHA ------- */
@@ -680,8 +683,8 @@ main#como_funciona #sub-seccion_6 {
   }
   #main_turnos #form_turnos #fieldset_servicio_comercio {
     display: grid;
-    width: 100%;
     height: 25%;
+    width: 100%;
     grid-template-columns: 45% 55%;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "nada  nada" "sec_titulo mapa" "seleccion mapa" "seleccion mapa" "sec_btns sec_btns";
@@ -703,8 +706,8 @@ main#como_funciona #sub-seccion_6 {
     padding: 0;
   }
   #main_turnos #form_turnos #fieldset_servicio_comercio #seccion_contenido_SyC select {
-    width: 100%;
     height: 15%;
+    width: 100%;
     border: 2px solid lightgrey;
     border-radius: 12px;
     cursor: pointer;
@@ -752,8 +755,8 @@ main#como_funciona #sub-seccion_6 {
   }
   #main_turnos #form_turnos #fieldset_fecha {
     display: grid;
-    width: 100%;
     height: 25%;
+    width: 100%;
     grid-template-columns: 45% 55%;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "nada nada" "seccion_titulo_fecha futuro_selector_fechas" "seccion_contenido_fecha futuro_selector_fechas" "seccion_contenido_fecha futuro_selector_fechas" "seccion_botones_fecha seccion_botones_fecha";
@@ -817,8 +820,8 @@ main#como_funciona #sub-seccion_6 {
   }
   #main_turnos #form_turnos #fieldset_datos_personales {
     display: grid;
-    width: 100%;
     height: 25%;
+    width: 100%;
     grid-template-columns: 100%;
     grid-template-rows: 1fr 5fr 1fr;
     grid-template-areas: "seccion_titulo_datos_personales" "seccion_contenido_datos_personales" "seccion_botones_datos_personales";
@@ -885,8 +888,8 @@ main#como_funciona #sub-seccion_6 {
   }
   #main_turnos #form_turnos #fieldset_politica_cancelacion {
     display: grid;
-    width: 100%;
     height: 25%;
+    width: 100%;
     grid-template-columns: 100%;
     grid-template-rows: 1fr 5fr 1fr;
     grid-template-areas: "seccion_titulo_polCanc" "seccion_contenido_polCanc" "seccion_botones_polCanc";
@@ -1001,14 +1004,16 @@ main#como_funciona #sub-seccion_6 {
 #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio {
   position: relative;
   display: grid;
+  height: 100%;
+  width: 100%;
   grid-template-columns: 2fr 10fr 2fr;
   grid-template-rows: 1fr;
   grid-template-areas: "nada inicio_sesion nada_2";
   align-items: center;
-  width: 100%;
-  height: 100%;
 }
 #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form {
+  height: 60%;
+  width: 100%;
   background-color: rgba(0, 105, 137, 0.4588235294);
   grid-area: inicio_sesion;
   display: flex;
@@ -1017,8 +1022,6 @@ main#como_funciona #sub-seccion_6 {
   align-items: center;
   border-radius: 12px;
   padding: 10%;
-  height: 60%;
-  width: 100%;
 }
 #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form h2 {
   color: white;
@@ -1027,8 +1030,8 @@ main#como_funciona #sub-seccion_6 {
 }
 #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form .entrada_datos_inicio_sesion {
   text-align: center;
-  width: 100%;
   height: 12%;
+  width: 100%;
   border: 1px solid white;
   border-radius: 10px;
 }
@@ -1056,11 +1059,11 @@ main#como_funciona #sub-seccion_6 {
   justify-content: center;
 }
 #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio label figure {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
 }
 #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio label figure img {
   height: 60px;
@@ -1068,11 +1071,11 @@ main#como_funciona #sub-seccion_6 {
 #main_mi_negocio #contenedor_secciones #seccion_principal_mi_negocio {
   position: relative;
   display: flex;
+  height: 100%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
 }
 #main_mi_negocio #contenedor_secciones #seccion_principal_mi_negocio #btn_mi_negocio {
   border: 2px solid #006989;
@@ -1090,8 +1093,8 @@ main#como_funciona #sub-seccion_6 {
 }
 #main_mi_negocio #contenedor_secciones #seccion_registro_mi_negocio {
   display: flex;
-  width: 100%;
   height: 100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -1128,8 +1131,8 @@ main#como_funciona #sub-seccion_6 {
     grid-template-rows: 1fr;
     grid-template-areas: "nada inicio_sesion nada_2";
     align-items: center;
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
   #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form {
     background-color: transparent;
@@ -1150,8 +1153,8 @@ main#como_funciona #sub-seccion_6 {
   }
   #main_mi_negocio #contenedor_secciones #seccion_incio_sesion_mi_negocio form .entrada_datos_inicio_sesion {
     text-align: center;
-    width: 100%;
     height: 12%;
+    width: 100%;
     border: 1px solid white;
     border-radius: 10px;
     outline-color: rgba(0, 105, 137, 0.4745098039);
@@ -1195,8 +1198,8 @@ main#como_funciona #sub-seccion_6 {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
   #main_mi_negocio #contenedor_secciones #seccion_principal_mi_negocio #btn_mi_negocio {
     display: none;
@@ -1239,8 +1242,8 @@ main#como_funciona #sub-seccion_6 {
 body {
   display: grid;
   font-family: "Josefin Sans", sans-serif;
-  width: 100%;
   height: 100vh;
+  width: 100%;
   grid-template-columns: 100%;
   grid-template-rows: 20vh 80vh 35vh;
   grid-template-areas: "header" "main" "footer";
@@ -1278,8 +1281,8 @@ body footer {
   grid-template-columns: 100%;
   grid-template-rows: 35% 30% 35%;
   grid-template-areas: "icono_footer" "texto_footer" "iconos_redes";
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 body footer a {
   color: white;
@@ -1402,7 +1405,7 @@ body footer #iconos_redes img {
     height: 55px;
   }
   body header .efectos:hover {
-    color: rgba(0, 105, 137, 0.4666666667);
+    color: #006989;
     transition: color 0.3s ease;
   }
   body header .sotcefe:hover {
