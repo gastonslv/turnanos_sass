@@ -1,8 +1,7 @@
 #main_mi_negocio {
     grid-area: main;
     position: relative;
-    height: 80vh;
-    width: 100%;
+    @include height-width(80vh, 100%);
     overflow: hidden;
 
     #checkbox_mi_negocio {
@@ -25,22 +24,21 @@
         display: flex;
         flex-direction: row;
         position: relative;
-        height: 100%;
-        width: 300%;
+        @include height-width(100%, 300%);
         transition: transform 0.4s;
         transform: translateX(-33.3333%);
 
         #seccion_incio_sesion_mi_negocio {
             position: relative;
             display: grid;
+            @include height-width(100%, 100%);
             grid-template-columns: 2fr 10fr 2fr;
             grid-template-rows: 1fr;
             grid-template-areas: "nada inicio_sesion nada_2";
             align-items: center;
-            width: 100%;
-            height: 100%;
 
             form {
+                @include height-width(60%, 100%);
                 background-color: #00698975;
                 grid-area: inicio_sesion;
                 display: flex;
@@ -49,8 +47,6 @@
                 align-items: center;
                 border-radius: 12px;
                 padding: 10%;
-                height: 60%;
-                width: 100%;
 
                 h2 {
                     color: white;
@@ -60,8 +56,7 @@
 
                 .entrada_datos_inicio_sesion {
                     text-align: center;
-                    width: 100%;
-                    height: 12%;
+                    @include height-width(12%, 100%);
                     border: 1px solid white;
                     border-radius: 10px;
                 }
@@ -94,11 +89,10 @@
                 justify-content: center;
 
                 figure {
+                    @include height-width(100%, 100%);
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    height: 100%;
-                    width: 100%;
 
                     img {
                         height: 60px;
@@ -110,11 +104,10 @@
         #seccion_principal_mi_negocio {
             position: relative;
             display: flex;
+            @include height-width(100%, 100%);
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
-            width: 100%;
-            height: 100%;
 
             #btn_mi_negocio {
                 border: 2px solid #006989;
@@ -135,8 +128,7 @@
 
         #seccion_registro_mi_negocio {
             display: flex;
-            width: 100%;
-            height: 100%;
+            @include height-width(100%, 100%);
             justify-content: center;
             align-items: center;
         }
@@ -147,8 +139,7 @@
     #main_mi_negocio {
         grid-area: main;
         position: relative;
-        height: 80vh;
-        width: 100%;
+        @include height-width(80vh, 100%);
         overflow: hidden;
         padding: 4%;
 
@@ -166,8 +157,7 @@
             grid-template-rows: 1fr;
             grid-template-areas: "iniciar_sesionn registrarsee";
             position: relative;
-            height: 100%;
-            width: 100%;
+            @include height-width(100%, 100%);
             transform: translateX(0%);
 
             #seccion_incio_sesion_mi_negocio {
@@ -178,8 +168,7 @@
                 grid-template-rows: 1fr;
                 grid-template-areas: "nada inicio_sesion nada_2";
                 align-items: center;
-                width: 100%;
-                height: 100%;
+                @include height-width(100%, 100%);
 
                 form {
                     background-color: transparent;
@@ -190,8 +179,7 @@
                     align-items: center;
                     border-radius: 12px;
                     padding: 10%;
-                    height: 60%;
-                    width: 100%;
+                    @include height-width(60%, 100%);
 
                     h2 {
                         color: white;
@@ -201,8 +189,7 @@
 
                     .entrada_datos_inicio_sesion {
                         text-align: center;
-                        width: 100%;
-                        height: 12%;
+                        @include height-width(12%, 100%);
                         border: 1px solid white;
                         border-radius: 10px;
                         outline-color: #00698979;
@@ -258,8 +245,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-evenly;
-                width: 100%;
-                height: 100%;
+                @include height-width(100%, 100%);
 
                 #btn_mi_negocio {
                     display: none;
