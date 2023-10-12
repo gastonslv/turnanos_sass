@@ -1,4 +1,3 @@
-
 @mixin tipo_borde($tipo: ''){
     @if $tipo == 'superior'{
         border-top-left-radius: 10px;
