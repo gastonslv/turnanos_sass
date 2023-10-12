@@ -11,8 +11,7 @@
     #main_FAQs {
         display: grid;
         grid-area: main;
-        height: 100%;
-        width: 100%;
+        @include height-width(100%, 100%);
         grid-template-columns: 100%;
         grid-template-rows: 50% 50%;
         grid-template-areas:
@@ -30,8 +29,7 @@
             "titulo_faqs"
             "pregutas_faqs";
             justify-items: center;
-            height: 90%;
-            width: 90%;
+            @include height-width(90%, 90%);
 
             #titulo_FAQs {
                 grid-area: titulo_faqs;
@@ -42,8 +40,7 @@
             #preguntas_FAQs {  /* padre flex */
                 grid-area: pregutas_faqs;
                 display: block;
-                width: 100%;
-                height: 100%;
+                @include height-width(100%, 100%);
                 border-radius: 20px;
                 overflow: scroll;
 
@@ -71,8 +68,7 @@
             display: flex;
             flex-direction: column;
             grid-area: consulta;
-            height: 90%;
-            width: 90%;
+            @include height-width(90%, 90%);
             background-color: #00698980;
             border-radius: 20px;
 
@@ -83,7 +79,7 @@
                 margin-bottom: 2%;
                 font-size: 1.7em;
                 text-align: center;
-                color: white;
+                color: $color-texto-blanco;
             }
 
             form {
@@ -95,8 +91,7 @@
                 padding: 5% 5% 5% 5%;
 
                 .entrada_info_consulta {
-                    height: 10%;
-                    width: 100%;
+                    @include height-width(10%, 100%);
                     border: 1px solid white;
                     background-color: white;
                     padding-left: 5px;
@@ -105,8 +100,7 @@
                 }
 
                 #entrada_info_consulta_motivo {
-                    height: 25%;
-                    width: 100%;
+                    @include height-width(25%, 100%);
                     border: 1px solid white;
                     background-color: white;
                     padding-left: 5px;
@@ -115,8 +109,7 @@
                 }
 
                 #boton_enviar_consulta {
-                    height: 10%;
-                    width: 100%;
+                    @include height-width(10%, 100%);
                     background-color: #006989;
                     color: white;
                     border: none;
@@ -153,8 +146,7 @@
                 "pregutas_faqs";
                 justify-items: center;
                 align-items: center;
-                height: 90%;
-                width: 90%;
+                @include height-width(90%, 90%);
 
                 #titulo_FAQs {
                     grid-area: titulo_faqs;
@@ -171,8 +163,7 @@
 
                 form {
                     .entrada_info_consulta {
-                        height: 10%;
-                        width: 100%;
+                        @include height-width(10%, 100%);
                         border: 1px solid white;
                         background-color: transparent;
                         padding-left: 5px;
@@ -193,8 +184,7 @@
                     }
 
                     #entrada_info_consulta_motivo {
-                        height: 25%;
-                        width: 100%;
+                        @include height-width(25%, 100%);
                         border: 1px solid white;
                         background-color: transparent;
                         padding-left: 5px;
@@ -215,8 +205,7 @@
 
                     
                     #boton_enviar_consulta {
-                        height: 7%;
-                        width: 30%;
+                        @include height-width(7%, 30%);
                         &:hover {
                             cursor: pointer;
                             transition: background-color 0.2s ease;

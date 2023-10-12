@@ -26,3 +26,8 @@
         color: $color-texto-blanco;
     }
 }
+
+@mixin height-width($h: auto, $w: auto) {
+    height: $h;
+    width: $w;
+}

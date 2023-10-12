@@ -15,8 +15,7 @@ header {
         background-color: $color-secundario;
         display: block;
         position: fixed;
-        height: 100%;
-        width: 100%;
+        @include height-width(100%, 100%);
         top: -100%;
         left: 0;
         transition: top 0.4s;
@@ -55,8 +54,7 @@ header {
 
                     #list_item_botones {
                         display: flex;
-                        height: 23%;
-                        width: 70%;
+                        @include height-width(23%, 70%);
                         flex-direction: column;
                         justify-content: space-between;
                         align-items: center;
@@ -90,19 +88,16 @@ header {
         #menu_desktop {
             grid-area: nav_header;
             display: inline-block;
-            height: 100%;
-            width: 100%;
+            @include height-width(100%, 100%);
             position: relative;
             top: 0;
 
             #grid_menu_desplegable {
                 display: block;
-                height: 100%;
-                width: 100%;
+                @include height-width(100%, 100%);
 
                 #barra_de_navegacion {
-                    height: 100%;
-                    width: 100%;
+                    @include height-width(100%, 100%);
                     display: flex;
                     align-items: center;
                     justify-content: right;
@@ -110,8 +105,7 @@ header {
                     ul {
                         list-style-type: none;
                         display: flex;
-                        height: 100%;
-                        width: 70%;
+                        @include height-width(100%, 70%);
                         flex-direction: row;
                         align-items: center;
                         justify-content: space-around;

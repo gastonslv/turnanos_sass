@@ -1,7 +1,6 @@
 main#como_funciona {
     display: grid;
-    width: 100%;
-    height: 100%;
+    @include height-width(100%, 100%);
     overflow: scroll;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 1fr);
@@ -33,8 +32,7 @@ main#como_funciona {
         align-items: center;
 
         #imagen_index {
-            height: 70%;
-            width: 70%;
+            @include height-width(70%, 70%);
         }
     }
 

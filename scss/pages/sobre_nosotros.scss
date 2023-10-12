@@ -7,8 +7,7 @@
     iframe {
         display: flex;
         grid-area: texto;
-        height: 50%;
-        width: 90%;
+        @include height-width(50%, 90%);
         border-radius: 20px;    
     }
 }
@@ -18,8 +17,7 @@
         iframe {
             display: flex;
             grid-area: texto;
-            height: 60%;
-            width: 80%;
+            @include height-width(60%, 80%);
         }
     }
 }
@@ -29,8 +27,7 @@
         iframe {
             display: flex;
             grid-area: texto;
-            height: 80%;
-            width: 80%;
+            @include height-width(80%, 80%);
         }
     }
 }
