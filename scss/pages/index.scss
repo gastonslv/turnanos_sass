@@ -38,39 +38,11 @@ main#como_funciona {
         }
     }
 
-    #sub-seccion_1 {
-        grid-area: txt1;
-        margin-bottom: 15%;
-        text-align: justify;
-    }
-
-    #sub-seccion_2 {
-        grid-area: txt2;
-        margin-bottom: 15%;
-        text-align: justify;
-    }
-    
-    #sub-seccion_3 {
-        grid-area: txt3;
-        margin-bottom: 15%;
-        text-align: justify;
-    }
-    
-    #sub-seccion_4 {
-        grid-area: txt4;
-        margin-bottom: 15%;
-        text-align: justify;
-    }
-    
-    #sub-seccion_5 {
-        grid-area: txt5;
-        margin-bottom: 15%;
-        text-align: justify;
-    }
-    
-    #sub-seccion_6 {
-        grid-area: txt6;
-        margin-bottom: 15%;
-        text-align: justify;
+    @for $i from 1 through 6 {
+        #sub-seccion_#{$i} {
+            grid-area: txt#{$i};
+            margin-bottom: 15%;
+            text-align: justify;
+        }
     }
 }
