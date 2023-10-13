@@ -118,23 +118,23 @@ header {
                     
                         .desktop_botones {
                             display: inline-block;
+                        }
 
-                            .botones {
-                                &:hover {
-                                    transition: background-color 0.2s ease;
-                                    background-color: $color-principal;
-                                    color: white;
-                                    border-color:#00698927;
-                                    cursor: pointer;
-                                }
+                        .botones {
+                            &:hover {
+                                transition: background-color 0.2s ease;
+                                background-color: #00698977;
+                                color: white;
+                                border-color:#00698918;
+                                cursor: pointer;
                             }
-                        
-                            .touchMe {
-                                &:active {
-                                    transition: transform 0.2s ease;
-                                    transform: scale(0.95);
-                                    cursor: pointer;
-                                }
+                        }
+                    
+                        .touchMe {
+                            &:active {
+                                transition: transform 0.2s ease;
+                                transform: scale(0.95);
+                                cursor: pointer;
                             }
                         }
                     }
