@@ -7,19 +7,16 @@ main#como_funciona {
     grid-template-areas:
     "foto"
     "txt1"
-    "txt2"
-    "txt3"
-    "txt4"
-    "txt5"
-    "txt6";
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "txt2";
+    justify-items: center;
+    row-gap: 5%;
     padding: 5%;
 
     h1 {
-        margin-bottom: 5%;
-        text-align: center;
-    }
-
-    h3 {
         margin-bottom: 5%;
         text-align: center;
     }
@@ -36,11 +33,20 @@ main#como_funciona {
         }
     }
 
-    @for $i from 1 through 6 {
-        #sub-seccion_#{$i} {
-            grid-area: txt#{$i};
-            margin-bottom: 15%;
-            text-align: justify;
+    #sub-seccion_1 {
+        grid-area: txt1;
+        text-align: justify;
+    }
+
+    #sub-seccion_2 {
+        grid-area: txt2;
+        text-align: justify;
+    }
+
+    @for $i from 1 through 4 {
+        #card_seccion_#{$i} {
+            grid-area: card#{$i};
+            width: auto;
         }
     }
 }
