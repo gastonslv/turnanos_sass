@@ -218,14 +218,22 @@ body {
                 justify-content: center;
                 align-items: center;
 
-                a {
-                    margin-left: 7%;
-                    text-decoration: none;
-                    color: $color-principal;
+                figure {
+                    #icono_header {
+                        height: 55px;
+                    }
                 }
 
-                #icono_header {
-                    height: 55px;
+                a {
+                    h3 {
+                        height: auto;
+                        width: auto;
+                        font-size: 1.17em;
+                        font-weight: 400;
+                        margin-left: 7%;
+                        text-decoration: none;
+                        color: $color-principal;
+                    }
                 }
             }
         
