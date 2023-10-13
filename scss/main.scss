@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Josefin+Sans:wght@200;300;400&family=Roboto:wght@300;500;700&display=swap');
 @import "./mixins/mixins.scss";
 @import "./variables/colores.scss";
 @import "./menu_desplegable.scss";
@@ -6,6 +7,8 @@
 @import "./pages/FAQS.scss";
 @import "./pages/turnos.scss";
 @import "./pages/mi_negocio.scss";
+
+$font-family: 'Josefin Sans', sans-serif;
 
 * {
     margin: 0px;
@@ -23,7 +26,7 @@
 
 body {
     display: grid;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: $font-family !important; // pisa el font-family de bootstrap
     @include height-width(100vh, 100%);
     grid-template-columns: 100%;
     grid-template-rows: 20vh 80vh 35vh;
