@@ -112,7 +112,7 @@ main#como_funciona {
         @for $i from 1 through 4 {
             #card_seccion_#{$i} {
                 grid-area: card#{$i};
-                width: 90%;
+                width: 100%;
                 height: 90%;
                 div {
                     height: 100%;
