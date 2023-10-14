@@ -32,3 +32,38 @@
     height: $h;
     width: $w;
 }
+
+@mixin efectos_btn_turno($tipo: '') {
+    @if $tipo == 'siguiente' {
+        &:hover {
+            transition: background-color 0.2s ease;
+            background-color: white;
+            color: #006989;
+        }
+
+        &:active {
+            transform: scale(1.05);
+            transition: transform 0.2s ease;
+        }
+    }
+
+    @if $tipo == 'volver' {
+        &:active {
+            transform: scale(0.9);
+            transition: transform 0.2s ease;
+        }
+    }
+
+    @if $tipo == 'reserva' {
+        &:hover {
+            background-color: white;
+            transition: background-color 0.2s ease;
+            color: #006989;
+        }
+
+        &:active {
+            transform: scale(0.95);
+            transition: transform 0.2s ease;
+        }
+    }
+}
