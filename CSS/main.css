@@ -925,10 +925,9 @@ main#como_funciona #card_seccion_4 {
     background-color: white;
     color: #006989;
   }
-  #main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_siguiente_s2:hover {
-    transition: background-color 0.2s ease;
-    background-color: white;
-    color: #006989;
+  #main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_siguiente_s2:active {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
   }
   #main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_volver_s2 {
     color: grey;
@@ -936,10 +935,9 @@ main#como_funciona #card_seccion_4 {
     margin-right: 1%;
     cursor: pointer;
   }
-  #main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_volver_s2:hover {
-    transition: background-color 0.2s ease;
-    background-color: white;
-    color: #006989;
+  #main_turnos #form_turnos #fieldset_fecha #seccion_botones_fecha #btn_volver_s2:active {
+    transform: scale(0.9);
+    transition: transform 0.2s ease;
   }
   #main_turnos #form_turnos #fieldset_datos_personales {
     display: grid;
@@ -1092,7 +1090,7 @@ main#como_funciona #card_seccion_4 {
     color: #006989;
   }
   #main_turnos #form_turnos #fieldset_politica_cancelacion #seccion_botones_politica_cancelacion #btn_reservar_turno:active {
-    transform: scale(1.05);
+    transform: scale(0.95);
     transition: transform 0.2s ease;
   }
 }
