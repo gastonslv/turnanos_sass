@@ -381,21 +381,7 @@
                         padding: 1%;
                         border-radius: 10px;
                         cursor: pointer;
-                    }
-
-                    #btn_siguiente_s1 {
-                        &:hover {
-                            transition: background-color 0.2s ease;
-                            background-color: white;
-                            color: #006989;
-                        }
-                    }
-
-                    #btn_siguiente_s1 {
-                        &:active {
-                            transform: scale(1.05);
-                            transition: transform 0.2s ease;
-                        }
+                        @include efectos_btn_turno('siguiente');
                     }
                 }
             }
@@ -451,22 +437,7 @@
                         border-radius: 10px;
                         margin-left: 1%;
                         cursor: pointer;
-                    }
-
-                    #btn_siguiente_s2 {
-                        &:hover {
-                            transition: background-color 0.2s ease;
-                            background-color: white;
-                            color: #006989;
-                        }
-                    }
-
-                    #btn_siguiente_s2 {
-                        &:hover {
-                            transition: background-color 0.2s ease;
-                            background-color: white;
-                            color: #006989;
-                        }
+                        @include efectos_btn_turno('siguiente');
                     }
 
                     #btn_volver_s2 {
@@ -474,15 +445,9 @@
                         text-decoration-line: underline;
                         margin-right: 1%;
                         cursor: pointer;
+                        @include efectos_btn_turno('volver')
                     }
 
-                    #btn_volver_s2 {
-                        &:hover {
-                            transition: background-color 0.2s ease;
-                            background-color: white;
-                            color: #006989;
-                        }
-                    }
                 }
             }
 
@@ -541,21 +506,7 @@
                         margin-left: 1%;
                         border-radius: 10px;
                         cursor: pointer;
-                    }
-
-                    #btn_siguiente_s3 {
-                        &:hover {
-                            transition: background-color 0.2s ease;
-                            background-color: white;
-                            color: #006989;
-                        }
-                    }
-
-                    #btn_siguiente_s3 {
-                        &:active {
-                            transform: scale(1.05);
-                            transition: transform 0.2s ease;
-                        }
+                        @include efectos_btn_turno('siguiente');
                     }
 
                     #btn_volver_s3 {
@@ -563,13 +514,7 @@
                         text-decoration-line: underline;
                         margin-right: 1%;
                         cursor: pointer;
-                    }
-
-                    #btn_volver_s3 {
-                        &:active {
-                            transform: scale(0.9);
-                            transition: transform 0.2s ease;
-                        }
+                        @include efectos_btn_turno('volver');
                     }
                 }
             }
@@ -645,11 +590,7 @@
                         text-decoration-line: underline;
                         margin-right: 1%;
                         cursor: pointer;
-
-                        &:active {
-                            transform: scale(0.9);
-                            transition: transform 0.2s ease;
-                        }
+                        @include efectos_btn_turno('volver')
                     }
 
                     #btn_reservar_turno {
@@ -660,17 +601,7 @@
                         border-radius: 10px;
                         margin-left: 1%;
                         cursor: pointer;
-
-                        &:hover {
-                            background-color: white;
-                            transition: background-color 0.2s ease;
-                            color: #006989;
-                        }
-
-                        &:active {
-                            transform: scale(1.05);
-                            transition: transform 0.2s ease;
-                        }
+                        @include efectos_btn_turno('reserva')
                     }
                 }
             }
