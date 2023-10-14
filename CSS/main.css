@@ -138,26 +138,15 @@ main#como_funciona {
   width: 100%;
   overflow: scroll;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(7, 1fr);
-  grid-template-areas: "foto" "txt1" "card1" "card2" "card3" "card4" "txt2";
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: "txt1" "card1" "card2" "card3" "card4" "txt2";
   justify-items: center;
   row-gap: 5%;
   padding: 5%;
 }
 main#como_funciona h1 {
-  margin-bottom: 5%;
+  margin: 5% 0% 5% 0%;
   text-align: center;
-}
-main#como_funciona #seccion_foto {
-  grid-area: foto;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-main#como_funciona #seccion_foto #imagen_index {
-  height: 70%;
-  width: 70%;
 }
 main#como_funciona #sub-seccion_1 {
   grid-area: txt1;
@@ -198,14 +187,14 @@ main#como_funciona #card_seccion_4 {
   main#como_funciona {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: "foto txt1" "card1 card2" "card3 card4" "txt2 txt2";
+    grid-template-areas: "txt1 txt1" "card1 card2" "card3 card4" "txt2 txt2";
     justify-items: none;
     row-gap: 5%;
     column-gap: 1.5%;
     padding: 0% 5% 2% 5%;
   }
   main#como_funciona h1 {
-    margin-bottom: 5%;
+    margin-bottom: 2.5%;
     text-align: center;
   }
   main#como_funciona #seccion_foto {
@@ -234,7 +223,7 @@ main#como_funciona #card_seccion_4 {
   }
   main#como_funciona #card_seccion_1 {
     grid-area: card1;
-    width: 90%;
+    width: 100%;
     height: 90%;
   }
   main#como_funciona #card_seccion_1 div {
@@ -256,7 +245,7 @@ main#como_funciona #card_seccion_4 {
   }
   main#como_funciona #card_seccion_2 {
     grid-area: card2;
-    width: 90%;
+    width: 100%;
     height: 90%;
   }
   main#como_funciona #card_seccion_2 div {
@@ -278,7 +267,7 @@ main#como_funciona #card_seccion_4 {
   }
   main#como_funciona #card_seccion_3 {
     grid-area: card3;
-    width: 90%;
+    width: 100%;
     height: 90%;
   }
   main#como_funciona #card_seccion_3 div {
@@ -300,7 +289,7 @@ main#como_funciona #card_seccion_4 {
   }
   main#como_funciona #card_seccion_4 {
     grid-area: card4;
-    width: 90%;
+    width: 100%;
     height: 90%;
   }
   main#como_funciona #card_seccion_4 div {
