@@ -136,7 +136,7 @@ main#como_funciona {
   display: grid;
   height: 100%;
   width: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 1fr);
   grid-template-areas: "txt1" "card1" "card2" "card3" "card4" "txt2";
@@ -378,7 +378,7 @@ main#como_funciona #card_seccion_4 {
   height: 100%;
   width: 100%;
   border-radius: 20px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 #body_FAQs #main_FAQs #cuerpo_preguntas_frecuntes #preguntas_FAQs .bloque_preguntas {
   display: flex;
