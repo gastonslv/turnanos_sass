@@ -42,7 +42,7 @@
                 display: block;
                 @include height-width(100%, 100%);
                 border-radius: 20px;
-                overflow: scroll;
+                overflow-y: scroll;
 
                 .bloque_preguntas {
                     display: flex;
